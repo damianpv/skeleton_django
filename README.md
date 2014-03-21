@@ -32,17 +32,24 @@ source bin/activate
 
 ### Install requirements ###
 
+    ```bash
     cd {{ project_name }}
     pip install -r requirements.txt
-
+    ```
+    
 
 ### Sync database ###
-
+    
+    ```bash
     manage.py syncdb
+    ```
     
     
 ### Running ###
-
+    
+    ```bash
     manage.py runserver
+    ```
+    
 
 Open browser to http://127.0.0.1:8000 or http://localhost:8000

@@ -1,4 +1,4 @@
-# skeleton_django # 
+# skeleton_django #
 
 Basic skeleton for Django.
 

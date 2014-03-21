@@ -1,4 +1,4 @@
-# skeleton_django# 
+# skeleton_django # 
 
 Basic skeleton for Django.
 
@@ -7,6 +7,7 @@ Basic skeleton for Django.
 
 ### Prerequisites ###
 
+* Debian/Ubuntu
 * Python >= 2.7+
 * PIP
 * virtualenv/virtualenvwrapper (optional)
@@ -30,6 +31,19 @@ cd {{ project_name }}-env
 source bin/activate
 ```
 
+### Clone the code ###
+Obtain the url to your git repository.
+
+```bash
+git clone <URL_TO_GIT_RESPOSITORY> {{ project_name }}
+```
+
+### Configure project ###
+```bash
+cp {{ project_name }}/__local_settings.py {{ project_name }}/local_settings.py
+vi {{ project_name }}/local_settings.py
+```
+
 ### Install requirements ###
 
 ```bash
@@ -41,14 +55,14 @@ pip install -r requirements.txt
 ### Sync database ###
 
 ```bash
-manage.py syncdb
+python manage.py syncdb
 ```
     
     
 ### Running ###
     
 ```bash
-manage.py runserver
+python manage.py runserver
 ```
     
 

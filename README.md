@@ -12,6 +12,14 @@ South
 Overview
 ========
 
+
+Prerequisites
+-----------
+
+* PIP
+* virtualenv/virtualenvwrapper (optional)
+
+
 Requirements
 -----------
 
@@ -26,6 +34,10 @@ Installation
     pip install MySQL-python
     pip install south
 
+    ### Sync database ###
+    ```bash
     manage.py syncdb
-
+    
+    ## Running ##
+    ```bash
     manage.py runserver

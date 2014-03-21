@@ -1,6 +1,6 @@
 # skeleton_django #
 
-Basic skeleton for Django.
+Basic skeleton for Django and Best practice.
 
 
 ## Overview ##

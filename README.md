@@ -11,14 +11,35 @@ Basic skeleton for Django.
 * PIP
 * virtualenv/virtualenvwrapper (optional)
 
+
 ## Installation ##
-    
+
+### Creating the environment ###
+Create a virtual python environment for the project.
+If you're not using virtualenv or virtualenvwrapper you may skip this step.
+
+#### For virtualenvwrapper ####
+```bash
+mkvirtualenv --no-site-packages {{ project_name }}-env
+```
+
+#### For virtualenv ####
+```bash
+virtualenv --no-site-packages {{ project_name }}-env
+cd {{ project_name }}-env
+source bin/activate
+```
+
+### Install requirements ###
+
     cd {{ project_name }}
     pip install -r requirements.txt
+
 
 ### Sync database ###
 
     manage.py syncdb
+    
     
 ### Running ###
 

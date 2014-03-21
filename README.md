@@ -1,5 +1,4 @@
-skeleton_django
-===============
+# skeleton_django# 
 
 Basic skeleton for Django.
 
@@ -9,37 +8,30 @@ Django Project
 South
   http://south.aeracode.org/
   
-Overview
-========
+## Overview ##
 
-
-Prerequisites
------------
+### Prerequisites ###
 
 * PIP
 * virtualenv/virtualenvwrapper (optional)
 
 
-Requirements
------------
+### Requirements ###
 
 * Python 2.7+
 * Django 1.6+
 * South 0.8.4+
 
-Installation
-============
+## Installation ##
     
     pip install django
     pip install MySQL-python
     pip install south
 
-Sync database
------------
+### Sync database ###
 
     manage.py syncdb
     
-Running
------------
+### Running ###
 
     manage.py runserver

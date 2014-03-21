@@ -17,6 +17,7 @@ Requirements
 
 * Python 2.7+
 * Django 1.6+
+* South 0.8.4+
 
 Installation
 ============

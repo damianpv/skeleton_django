@@ -34,10 +34,12 @@ Installation
     pip install MySQL-python
     pip install south
 
-    ### Sync database ###
-    ```bash
+Sync database
+-----------
+
     manage.py syncdb
     
-    ## Running ##
-    ```bash
+Running
+-----------
+
     manage.py runserver

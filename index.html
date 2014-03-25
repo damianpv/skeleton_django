@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Skeleton django by damianpv</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/damianpv/skeleton_django">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/damianpv/skeleton_django/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/damianpv/skeleton_django/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Skeleton django</h1>
+          <p>Basic skeleton for Django.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/damianpv">damianpv</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="skeleton_django" class="anchor" href="#skeleton_django"><span class="octicon octicon-link"></span></a>skeleton_django</h1>
+
+<p>Basic skeleton for Django and Best practice.</p>
+
+<h2>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+<h3>
+<a name="prerequisites" class="anchor" href="#prerequisites"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<ul>
+<li>Debian/Ubuntu</li>
+<li>Python &gt;= 2.7+</li>
+<li>PIP</li>
+<li>virtualenv/virtualenvwrapper (optional)</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a name="creating-the-environment" class="anchor" href="#creating-the-environment"><span class="octicon octicon-link"></span></a>Creating the environment</h3>
+
+<p>Create a virtual python environment for the project.
+If you're not using virtualenv or virtualenvwrapper you may skip this step.</p>
+
+<h4>
+<a name="for-virtualenvwrapper" class="anchor" href="#for-virtualenvwrapper"><span class="octicon octicon-link"></span></a>For virtualenvwrapper</h4>
+
+<div class="highlight highlight-bash"><pre>mkvirtualenv --no-site-packages <span class="o">{{</span> project_name <span class="o">}}</span>-env
+</pre></div>
+
+<h4>
+<a name="for-virtualenv" class="anchor" href="#for-virtualenv"><span class="octicon octicon-link"></span></a>For virtualenv</h4>
+
+<div class="highlight highlight-bash"><pre>virtualenv --no-site-packages <span class="o">{{</span> project_name <span class="o">}}</span>-env
+<span class="nb">cd</span> <span class="o">{{</span> project_name <span class="o">}}</span>-env
+<span class="nb">source </span>bin/activate
+</pre></div>
+
+<h3>
+<a name="clone-the-code" class="anchor" href="#clone-the-code"><span class="octicon octicon-link"></span></a>Clone the code</h3>
+
+<p>Obtain the url to your git repository.</p>
+
+<div class="highlight highlight-bash"><pre>git clone &lt;URL_TO_GIT_RESPOSITORY&gt; <span class="o">{{</span> project_name <span class="o">}}</span>
+</pre></div>
+
+<h3>
+<a name="configure-project" class="anchor" href="#configure-project"><span class="octicon octicon-link"></span></a>Configure project</h3>
+
+<div class="highlight highlight-bash"><pre>cp <span class="o">{{</span> project_name <span class="o">}}</span>/__local_settings.py <span class="o">{{</span> project_name <span class="o">}}</span>/local_settings.py
+vi <span class="o">{{</span> project_name <span class="o">}}</span>/local_settings.py
+</pre></div>
+
+<h3>
+<a name="install-requirements" class="anchor" href="#install-requirements"><span class="octicon octicon-link"></span></a>Install requirements</h3>
+
+<div class="highlight highlight-bash"><pre><span class="nb">cd</span> <span class="o">{{</span> project_name <span class="o">}}</span>
+pip install -r requirements.txt
+</pre></div>
+
+<h3>
+<a name="sync-database" class="anchor" href="#sync-database"><span class="octicon octicon-link"></span></a>Sync database</h3>
+
+<div class="highlight highlight-bash"><pre>python manage.py syncdb
+</pre></div>
+
+<h3>
+<a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h3>
+
+<div class="highlight highlight-bash"><pre>python manage.py runserver
+</pre></div>
+
+<p>Open browser to <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> or http://localhost:8000</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

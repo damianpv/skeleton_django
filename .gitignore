@@ -3,3 +3,4 @@
 *.pyc
 local_settings.py
 .idea
+sk_django/db.sqlite3

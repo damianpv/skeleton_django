@@ -59,7 +59,7 @@ python manage.py syncdb
 ```
     
     
-### Running ###
+## Running ##
     
 ```bash
 python manage.py runserver

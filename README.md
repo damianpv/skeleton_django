@@ -1,6 +1,6 @@
 # skeleton_django #
 
-Basic skeleton for Django and Best practice.
+Basic skeleton for Django 1.6+ and Best practice.
 
 
 ## Overview ##
@@ -8,7 +8,7 @@ Basic skeleton for Django and Best practice.
 ### Prerequisites ###
 
 * Debian/Ubuntu
-* Python >= 2.7+
+* Python 2.7+
 * PIP
 * virtualenv/virtualenvwrapper (optional)
 

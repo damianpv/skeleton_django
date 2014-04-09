@@ -76,6 +76,10 @@ python manage.py syncdb
     
 ```bash
 python manage.py runserver
+
+python manage.py runserver --settings=sk_django.settings.dev
+
+python manage.py runserver --settings=sk_django.settings.prod
 ```
     
 

@@ -39,9 +39,22 @@ git clone <URL_TO_GIT_RESPOSITORY> {{ project_name }}
 ```
 
 ### Configure project ###
+
+for development use:
 ```bash
-cp {{ project_name }}/__local_settings.py {{ project_name }}/local_settings.py
-vi {{ project_name }}/local_settings.py
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sk_django.settings.dev")
+```
+
+or for production use : 
+
+```bash
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sk_django.settings.prod")
+```
+
+in: 
+```bash
+vi {{ project_name }}/manage.py
+
 ```
 
 ### Install requirements ###

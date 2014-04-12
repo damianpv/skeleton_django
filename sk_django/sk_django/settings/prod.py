@@ -1,5 +1,8 @@
 from sk_django.settings.base import *
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 

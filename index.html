@@ -89,8 +89,20 @@ If you're not using virtualenv or virtualenvwrapper you may skip this step.</p>
 <h3>
 <a name="configure-project" class="anchor" href="#configure-project"><span class="octicon octicon-link"></span></a>Configure project</h3>
 
-<div class="highlight highlight-bash"><pre>cp <span class="o">{{</span> project_name <span class="o">}}</span>/__local_settings.py <span class="o">{{</span> project_name <span class="o">}}</span>/local_settings.py
-vi <span class="o">{{</span> project_name <span class="o">}}</span>/local_settings.py
+<p>for development use:</p>
+
+<div class="highlight highlight-bash"><pre>os.environ.setdefault<span class="o">(</span><span class="s2">"DJANGO_SETTINGS_MODULE"</span>, <span class="s2">"sk_django.settings.dev"</span><span class="o">)</span>
+</pre></div>
+
+<p>or for production use : </p>
+
+<div class="highlight highlight-bash"><pre>os.environ.setdefault<span class="o">(</span><span class="s2">"DJANGO_SETTINGS_MODULE"</span>, <span class="s2">"sk_django.settings.prod"</span><span class="o">)</span>
+</pre></div>
+
+<p>in: </p>
+
+<div class="highlight highlight-bash"><pre>vi <span class="o">{{</span> project_name <span class="o">}}</span>/manage.py
+
 </pre></div>
 
 <h3>
@@ -110,6 +122,10 @@ pip install -r requirements.txt
 <a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h2>
 
 <div class="highlight highlight-bash"><pre>python manage.py runserver
+
+python manage.py runserver --settings<span class="o">=</span>sk_django.settings.dev
+
+python manage.py runserver --settings<span class="o">=</span>sk_django.settings.prod
 </pre></div>
 
 <p>Open browser to <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> or http://localhost:8000</p>

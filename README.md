@@ -42,13 +42,21 @@ git clone <URL_TO_GIT_RESPOSITORY> {{ project_name }}
 
 for development use:
 ```bash
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sk_django.settings.dev")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sk_django.settings.local")
 ```
 
-or for production use : 
-
+for staging use:
+```bash
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sk_django.settings.staging")
+```
+for production use : 
 ```bash
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sk_django.settings.prod")
+```
+
+for test use : 
+```bash
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sk_django.settings.test")
 ```
 
 in: 

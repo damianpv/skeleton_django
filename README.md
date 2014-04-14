@@ -82,10 +82,14 @@ python manage.py syncdb
     
 ```bash
 python manage.py runserver
-
-python manage.py runserver --settings=sk_django.settings.dev
-
+or
+python manage.py runserver --settings=sk_django.settings.local
+or
 python manage.py runserver --settings=sk_django.settings.prod
+or
+python manage.py runserver --settings=sk_django.settings.staging
+or
+python manage.py runserver --settings=sk_django.settings.test
 ```
     
 

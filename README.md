@@ -61,7 +61,13 @@ vi {{ project_name }}/manage.py
 
 ```bash
 cd {{ project_name }}
-pip install -r requirements.txt
+pip install -r requirements/local.txt
+or
+pip install -r requirements/production.txt
+or
+pip install -r requirements/staging.txt
+or
+pip install -r requirements/test.txt
 ```
     
 

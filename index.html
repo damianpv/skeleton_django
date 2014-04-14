@@ -91,12 +91,22 @@ If you're not using virtualenv or virtualenvwrapper you may skip this step.</p>
 
 <p>for development use:</p>
 
-<div class="highlight highlight-bash"><pre>os.environ.setdefault<span class="o">(</span><span class="s2">"DJANGO_SETTINGS_MODULE"</span>, <span class="s2">"sk_django.settings.dev"</span><span class="o">)</span>
+<div class="highlight highlight-bash"><pre>os.environ.setdefault<span class="o">(</span><span class="s2">"DJANGO_SETTINGS_MODULE"</span>, <span class="s2">"sk_django.settings.local"</span><span class="o">)</span>
 </pre></div>
 
-<p>or for production use : </p>
+<p>for staging use:</p>
+
+<div class="highlight highlight-bash"><pre>os.environ.setdefault<span class="o">(</span><span class="s2">"DJANGO_SETTINGS_MODULE"</span>, <span class="s2">"sk_django.settings.staging"</span><span class="o">)</span>
+</pre></div>
+
+<p>for production use : </p>
 
 <div class="highlight highlight-bash"><pre>os.environ.setdefault<span class="o">(</span><span class="s2">"DJANGO_SETTINGS_MODULE"</span>, <span class="s2">"sk_django.settings.prod"</span><span class="o">)</span>
+</pre></div>
+
+<p>for test use : </p>
+
+<div class="highlight highlight-bash"><pre>os.environ.setdefault<span class="o">(</span><span class="s2">"DJANGO_SETTINGS_MODULE"</span>, <span class="s2">"sk_django.settings.test"</span><span class="o">)</span>
 </pre></div>
 
 <p>in: </p>
@@ -109,7 +119,13 @@ If you're not using virtualenv or virtualenvwrapper you may skip this step.</p>
 <a name="install-requirements" class="anchor" href="#install-requirements"><span class="octicon octicon-link"></span></a>Install requirements</h3>
 
 <div class="highlight highlight-bash"><pre><span class="nb">cd</span> <span class="o">{{</span> project_name <span class="o">}}</span>
-pip install -r requirements.txt
+pip install -r requirements/local.txt
+or
+pip install -r requirements/production.txt
+or
+pip install -r requirements/staging.txt
+or
+pip install -r requirements/test.txt
 </pre></div>
 
 <h3>
@@ -122,10 +138,14 @@ pip install -r requirements.txt
 <a name="running" class="anchor" href="#running"><span class="octicon octicon-link"></span></a>Running</h2>
 
 <div class="highlight highlight-bash"><pre>python manage.py runserver
-
-python manage.py runserver --settings<span class="o">=</span>sk_django.settings.dev
-
+or
+python manage.py runserver --settings<span class="o">=</span>sk_django.settings.local
+or
 python manage.py runserver --settings<span class="o">=</span>sk_django.settings.prod
+or
+python manage.py runserver --settings<span class="o">=</span>sk_django.settings.staging
+or
+python manage.py runserver --settings<span class="o">=</span>sk_django.settings.test
 </pre></div>
 
 <p>Open browser to <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> or http://localhost:8000</p>
